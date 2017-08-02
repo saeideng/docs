@@ -431,9 +431,8 @@ with custom finders::
 
 The above would translate into the following::
 
-    $users->find('trolls', [
-        'conditions' => ['username' => 'bro']
-    ]);
+    $users->find('trolls')
+          ->where(['username' => 'bro']);
 
 Once you have a query object from a dynamic finder, you'll need to call
 ``first()`` if you want the first result.
